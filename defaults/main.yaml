@@ -1,0 +1,4 @@
+snips_version: latest
+
+snapcast_repo: https://github.com/badaix/snapcast.git
+snapcast_working_dir: /tmp/snapcast

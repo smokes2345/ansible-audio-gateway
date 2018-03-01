@@ -1,0 +1,6 @@
+---
+- include_vars: "{{ ansible_distribution }}.yaml"
+  name: "Include Dist vars"
+- include_tasks: "{{ ansible_distribution }}.yaml"
+  name: "Include Dist tasks"
+- include_tasks: snapcast_client.yaml

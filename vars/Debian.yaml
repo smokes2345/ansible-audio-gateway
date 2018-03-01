@@ -1,0 +1,12 @@
+snapcast_build_deps:
+- git
+- build-essential
+- libasound2-dev
+- libvorbisidec-dev
+- libvorbis-dev
+- libflac-dev
+- alsa-utils
+- libavahi-client-dev
+- avahi-daemon
+snips_supported_releases:
+- "jessie"

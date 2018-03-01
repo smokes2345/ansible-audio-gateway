@@ -1,0 +1,19 @@
+---
+- name: install build deps
+  package:
+    name: "{{ snapcast_build_deps }}"
+
+- name: clone repo
+  git:
+    name: "{{ snapcast_repo }}"
+    dest: "{{ snapcast_working_dir }}"
+    accept_hostkey: yes
+
+- name: build
+  make:
+    chdir: "{{ snapcast_working_dir }}"
+
+- name: install
+  make:
+    chdir: "{{ snapcast_working_dir }}"
+    target: installclient

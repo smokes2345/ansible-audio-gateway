@@ -1,0 +1,6 @@
+---
+- include_tasks: Debian/snips_client.yaml
+  name: Include Snips Build
+  when: ansible_distribution_release in snips_supported_releases
+#- include_tasks: Debian/snapcast_client.yaml
+#  name: Include SnapCast Build

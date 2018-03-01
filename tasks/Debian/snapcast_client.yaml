@@ -1,0 +1,15 @@
+---
+- name: install dependencies
+  pagckage:
+    name:
+    - git
+    - build-essential
+    - libasound2-dev
+    - libvorbisidec-dev
+    - libvorbis-dev
+    - libflac-dev
+    - alsa-utils
+    - libavahi-client-dev
+    - avahi-daemon
+
+- include_tasks: snapcast_client.yaml

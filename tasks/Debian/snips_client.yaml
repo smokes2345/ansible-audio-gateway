@@ -1,0 +1,19 @@
+- name: install packages
+  package:
+    name:
+    - dirmngr
+
+- name: setup snips repo
+  copy:
+    content: "deb https://debian.snips.ai/{{ ansible_distribution_release }} stable main"
+    dest: "/etc/apt/sources.list.d/snips.list"
+
+- name: setup snips repo key
+  apt_key:
+    keyserver: pgp.mit.edu
+    id: F727C778CCB0A455
+
+- name: install snips
+  package:
+    name: snips-audio-client
+    state: "{{ snips_version }}"
